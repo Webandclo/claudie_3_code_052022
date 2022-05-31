@@ -1,6 +1,6 @@
 @mixin btn {
     padding: $grid-gutter;
-    @include border;
+    //@include border;
     background: linear-gradient($colour-secondary, $colour-primary);
     color: $colour-white;
     box-shadow: 1px 5px 12px #bbb;

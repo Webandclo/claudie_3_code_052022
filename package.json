@@ -1,21 +1,19 @@
 {
-  "name": "writing-sass",
+  "name": "claudie_3_code_052022",
   "version": "1.0.0",
-  "description": "Claudie projet P3",
-  "main": "index.js",
+  "description": "Claudie projet P3 OCR",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
      "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gerkx/maintainable-css-with-sass.git"
+    "url": "git+https://github.com/Webandclo/claudie_3_code_052022.git"
   },
-  "author": "gerkx",
-  "license": "ISC",
+  "author": "Claudie",
   "bugs": {
-    "url": "https://github.com/gerkx/maintainable-css-with-sass/issues"
+    "url": "https://github.com/Webandclo/claudie_3_code_052022/issues"
   },
-  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme"
+  "homepage": "https://github.com/Webandclo/claudie_3_code_052022#readme"
 }
 
