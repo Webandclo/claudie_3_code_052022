@@ -11,6 +11,111 @@
     <script src="https://kit.fontawesome.com/5fbbf54624.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/css/style.css">
     <title>P3 Ohmyfood</title>
+    <style>
+        /*Mobile first transition: background-color 2s;*/
+
+        body {
+            margin: 0;
+        }
+        .container, .header {
+            margin: auto;
+            max-width: 768px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            background: linear-gradient(-5deg, #9356DC, #FF79DA );
+            box-shadow: 1px 5px 12px #bbb;
+            color: #fff;
+            border-radius: 18px;
+            border: none;
+            padding: 10px 20px;
+        }
+        button:hover {
+            background: linear-gradient(-5deg, #FF79DA, #9356DC  );
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .header h1 {
+            justify-content: center;
+            display: flex;
+        }
+        .header .nav {
+            justify-content: center;
+            display: flex;
+            background: #eaeaea;
+            box-shadow: 1px 5px 12px #bbb;
+
+           
+        }
+        .fonctionnement ul li {
+            padding: 15px 20px;
+            background: #f6f6f6;
+            box-shadow: 1px 5px 12px #bbb;
+            border-radius: 15px;
+            list-style: none;
+            margin: 15px 0;
+            color: #fff;
+        }
+        .fonctionnement ul {
+            padding: 0;
+            position: relative;
+            margin: 0 20px;
+        }
+        .fonctionnement ul span{
+            position: absolute;
+            left: -10px;
+            border-radius: 50%;
+            background: #9356DC;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .fonctionnement ul i {
+            color: #7e7e7e;
+            padding: 0 20px;
+        }
+        .fonctionnement ul a {
+            text-decoration: none;
+            color: #000;
+        }
+        .reserver {
+            text-align: center;
+        }
+        section > div{
+            margin: 15px;
+        }
+        .reserver ,.restaurants {
+            background: #f6f6f6;
+            padding: 25px 0;
+        }
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 1px 5px 12px #bbb;
+        }
+        .card img {
+            object-fit: cover;
+            width: 100%;
+        }
+        .container-text {
+            padding: 10px;
+        }
+
+    @media only screen and (min-width: 768px) {
+        .container, .header {
+            background: red;
+        }
+    }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -27,41 +132,46 @@
     
     <main class="container">
         <div>
-            <section>
-                <h2>Réservez le menu qui vous convient</h2>
-                <h3>Découvrez des restaurants d'exception, selectionnés par nos soins.</h3>
-                <button>Explorer nos restaurants</button>
+            <section class="reserver">
+                <div>
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <h3>Découvrez des restaurants d'exception, selectionnés par nos soins.</h3>
+                    <button>Explorer nos restaurants</button>
+                </div>
             </section>
 
-            <section>
-                <h2>Fonctionnement</h2>
+            <section class="fonctionnement">
+                <div>
+                    <h2>Fonctionnement</h2>
 
-                <ul>
-                    <li class=""><a href="#" title="Choississez un restaurant">1 <i class="fa-solid fa-mobile-screen-button"></i> Choississez un restaurant</a></li>
-                    <li class=""><a href="#" title="Composez votre menu">2 <i class="fa-solid fa-list"></i> Composez votre menu</a></li>
-                    <li class=""><a href="#" title="Dégustez au restaurant">3 <i class="fa-solid fa-store"></i> Dégustez au restaurant</a></li>
-                   
-                </ul>
+                    <ul>
+                        <li class=""><a href="#" title="Choississez un restaurant"><span>1</span> <i class="fa-solid fa-mobile-screen-button"></i> Choississez un restaurant</a></li>
+                        <li class=""><a href="#" title="Composez votre menu"><span>2</span> <i class="fa-solid fa-list"></i> Composez votre menu</a></li>
+                        <li class=""><a href="#" title="Dégustez au restaurant"><span>3</span> <i class="fa-solid fa-store"></i> Dégustez au restaurant</a></li>
+                    </ul>
+                </div>
             </section>
 
-            <section>
-                <h2>Restaurants</h2>
+            <section class="restaurants">
+                <div>
+                    <h2>Restaurants</h2>
 
-                <div class="bloc-card">
-                    <div class="card">
-                        <div class="container-image">
-                          <img src="#" alt="#" >
-                        </div>
-                        <div class="container-text">
-                            <div>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                    <div class="bloc-card">
+                        <div class="card">
+                            <div class="container-image">
+                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="#" >
                             </div>
-                            <div>
-                                <i class="fa-solid fa-heart"></i>
-                                <i class="fa-regular fa-heart"></i>
+                            <div class="container-text">
+                                <div>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                            
                             </div>
-                          
                         </div>
                     </div>
                 </div>
