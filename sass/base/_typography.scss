@@ -1,19 +1,29 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: $colour-primary;
+    color: $colour-black;
     font-size: 2rem;
     font-weight: 100;
-    line-height: 1.7;
+    line-height: 1.4;
 }
 
 h1, .logo {
     font-family: 'Shrikhand', cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 5rem;
 }
 
 h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
+    margin: 7px 0;
+}
+h3 {
+    color: $colour-grey;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.card h3 {
+    color: $colour-black;
+
 }
 textarea {
     font-family: 'Roboto', sans-serif;
@@ -22,9 +32,7 @@ textarea {
 }
 button {
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.75rem;
+    font-weight: 300;
 }
 a {
     text-decoration: none;

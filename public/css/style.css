@@ -20,7 +20,11 @@
   justify-content: center;
   display: flex;
   background: #eaeaea;
-  box-shadow: 1px 5px 12px #bbb;
+  box-shadow: inset 0px 3px 10px #bbb;
+  padding: 15px;
+}
+.header .nav li {
+  list-style: none;
 }
 
 .fonctionnement ul {
@@ -29,6 +33,7 @@
   margin: 0 20px;
 }
 .fonctionnement ul li {
+  position: relative;
   padding: 15px 20px;
   background: #f6f6f6;
   box-shadow: 1px 5px 12px #bbb;
@@ -40,6 +45,7 @@
 .fonctionnement ul span {
   position: absolute;
   left: -10px;
+  top: calc(50% - 10px);
   border-radius: 50%;
   background: #9356DC;
   width: 20px;
@@ -56,6 +62,7 @@
 .fonctionnement ul a {
   text-decoration: none;
   color: #000;
+  font-weight: 300;
 }
 
 .reserver {
@@ -68,7 +75,7 @@ section > div {
 
 .reserver, .restaurants {
   background: #f6f6f6;
-  padding: 25px 0;
+  padding: 25px;
 }
 
 .card {
@@ -83,6 +90,38 @@ section > div {
 }
 .card .container-text {
   padding: 10px;
+  display: flex;
+}
+.card .container-title {
+  flex-basis: 80%;
+  flex-shrink: 1;
+}
+.card .container-favorit {
+  flex-basis: 20%;
+  flex-shrink: 1;
+  position: relative;
+}
+.card .container-favorit::before {
+  display: flex;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f004";
+  width: 21px;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.card .container-favorit:hover::before {
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke-color: inherit;
+  -webkit-text-stroke-width: 0;
+  color: linear-gradient(-5deg, #9356DC, #FF79DA);
+  color: #9356DC;
 }
 
 @media only screen and (min-width: 768px) {
@@ -108,20 +147,31 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #9356DC;
+  color: #000;
   font-size: 2rem;
   font-weight: 100;
-  line-height: 1.7;
+  line-height: 1.4;
 }
 
 h1, .logo {
   font-family: "Shrikhand", cursive;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 5rem;
 }
 
 h2, h3, h4 {
   font-family: "Roboto", sans-serif;
+  margin: 7px 0;
+}
+
+h3 {
+  color: #7e7e7e;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.card h3 {
+  color: #000;
 }
 
 textarea {
@@ -132,9 +182,7 @@ textarea {
 
 button {
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2.75rem;
+  font-weight: 300;
 }
 
 a {
@@ -147,7 +195,7 @@ a {
   color: #fff;
   box-shadow: 1px 5px 12px #bbb;
   cursor: pointer;
-  border-radius: 18px;
+  border-radius: 22px;
   border: none;
   padding: 10px 20px;
 }
