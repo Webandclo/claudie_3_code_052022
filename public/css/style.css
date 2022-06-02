@@ -1,9 +1,107 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
 .container, .header {
   margin: auto;
   max-width: 768px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+h1, .logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+h2, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  margin: 5px 0;
+}
+
+h3 {
+  color: #7e7e7e;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.card h3 {
+  color: #000;
+  font-weight: 400;
+}
+
+.container-menu h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+}
+
+.container-menu h3 {
+  text-transform: uppercase;
+  position: relative;
+}
+.container-menu h3::after {
+  position: absolute;
+  background: #99E2D0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 45px;
+  content: "";
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn, button {
+  padding: 1.5rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  box-shadow: 1px 5px 12px #bbb;
+  cursor: pointer;
+  border-radius: 22px;
+  border: none;
+  padding: 10px 20px;
+}
+.btn:hover, button:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+.btn--full-width, button--full-width {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header {
@@ -39,8 +137,14 @@
   box-shadow: 1px 5px 12px #bbb;
   border-radius: 15px;
   list-style: none;
-  margin: 15px 0;
+  margin: 20px 0;
   color: #fff;
+}
+.fonctionnement ul li:hover {
+  background: #ece1f9;
+}
+.fonctionnement ul li:hover i {
+  color: #9356DC;
 }
 .fonctionnement ul span {
   position: absolute;
@@ -54,6 +158,7 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  font-size: 1.2rem;
 }
 .fonctionnement ul i {
   color: #7e7e7e;
@@ -83,13 +188,18 @@ section > div {
   overflow: hidden;
   background: #fff;
   box-shadow: 1px 5px 12px #bbb;
+  position: relative;
+}
+.card .container-image {
+  max-height: 200px;
+  overflow: hidden;
 }
 .card img {
   object-fit: cover;
   width: 100%;
 }
 .card .container-text {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   display: flex;
 }
 .card .container-title {
@@ -123,88 +233,30 @@ section > div {
   color: linear-gradient(-5deg, #9356DC, #FF79DA);
   color: #9356DC;
 }
+.card .tag-new {
+  padding: 5px 8px;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  background: #99E2D0;
+  color: #278870;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-weight: 300;
+}
 
 @media only screen and (min-width: 768px) {
   .container, .header {
     background: red;
   }
 }
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+.top-image {
+  max-height: 250px;
 }
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: #000;
-  font-size: 2rem;
-  font-weight: 100;
-  line-height: 1.4;
-}
-
-h1, .logo {
-  font-family: "Shrikhand", cursive;
-  font-weight: 500;
-  font-size: 5rem;
-}
-
-h2, h3, h4 {
-  font-family: "Roboto", sans-serif;
-  margin: 7px 0;
-}
-
-h3 {
-  color: #7e7e7e;
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.card h3 {
-  color: #000;
-}
-
-textarea {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 2rem;
-}
-
-button {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-}
-
-.btn, button {
-  padding: 1.5rem;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: #fff;
-  box-shadow: 1px 5px 12px #bbb;
-  cursor: pointer;
-  border-radius: 22px;
-  border: none;
-  padding: 10px 20px;
-}
-.btn:hover, button:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
-}
-.btn--full-width, button--full-width {
+.top-image img {
+  object-fit: cover;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

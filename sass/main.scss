@@ -3,10 +3,12 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
-@import "./layout/container";
 
 @import "./base/base";
 @import "./base/container";
 @import "./base/typography";
 
 @import "./components/buttons";
+
+@import "./pages/home";
+@import "./pages/menu";

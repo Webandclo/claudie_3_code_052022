@@ -14,7 +14,7 @@ h1, .logo {
 
 h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
-    margin: 7px 0;
+    margin: 5px 0;
 }
 h3 {
     color: $colour-grey;
@@ -23,7 +23,24 @@ h3 {
 }
 .card h3 {
     color: $colour-black;
-
+    font-weight: 400;
+}
+.container-menu h2 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 500;
+}
+.container-menu h3 {
+    text-transform: uppercase;
+    position: relative;
+    &::after {
+        position: absolute;
+        background: $colour-accent;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 45px;
+        content: "";
+    }
 }
 textarea {
     font-family: 'Roboto', sans-serif;
