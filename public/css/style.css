@@ -22,6 +22,22 @@ body {
   flex-wrap: wrap;
 }
 
+.footer {
+  background: #353535;
+  color: #fff;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer ul li i {
+  padding-right: 10px;
+}
+.footer .container {
+  display: flex;
+  justify-content: start;
+  padding: 25px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -30,10 +46,15 @@ body {
   line-height: 1.4;
 }
 
-h1, .logo {
+h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   font-size: 5rem;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
 }
 
 h2, h3, h4 {
@@ -69,6 +90,11 @@ h3 {
   height: 3px;
   width: 45px;
   content: "";
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 textarea {
@@ -174,8 +200,8 @@ a {
   text-align: center;
 }
 
-section > div {
-  margin: 15px;
+.fonctionnement {
+  padding: 25px;
 }
 
 .reserver, .restaurants {
@@ -245,11 +271,6 @@ section > div {
   font-weight: 300;
 }
 
-@media only screen and (min-width: 768px) {
-  .container, .header {
-    background: red;
-  }
-}
 .top-image {
   max-height: 250px;
 }

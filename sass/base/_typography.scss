@@ -6,10 +6,14 @@ body {
     line-height: 1.4;
 }
 
-h1, .logo {
+h1 {
     font-family: 'Shrikhand', cursive;
     font-weight: 500;
     font-size: 5rem;
+}
+.logo {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 500;
 }
 
 h2, h3, h4 {
@@ -41,6 +45,10 @@ h3 {
         width: 45px;
         content: "";
     }
+}
+h4 {
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 textarea {
     font-family: 'Roboto', sans-serif;
