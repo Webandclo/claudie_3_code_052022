@@ -284,10 +284,8 @@ section > div {
 }
 .container-menu section {
   background: #f6f6f6;
-  padding: 15px;
 }
 .container-menu section .menu_plat {
-  padding: 12px;
   margin: 0;
   border-radius: 20px;
   background: #fff;
@@ -302,6 +300,7 @@ section > div {
 }
 .container-menu section .menu_plat_texte {
   flex-basis: 90%;
+  padding: 11px;
 }
 .container-menu section .menu_plat_prix {
   flex-basis: 10%;
@@ -309,18 +308,35 @@ section > div {
   font-weight: 400;
   display: flex;
   justify-content: end;
-  padding-right: 10px;
+  align-items: end;
+  padding: 10px;
 }
 .container-menu section .menu_plat_selection {
   transform: translate(100px 0);
   overflow: hidden;
   width: 0;
+  background: #99E2D0;
   transition: transform 330ms ease-in-out;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: translate(100px, 0);
+}
+.container-menu section .menu_plat_selection i {
+  color: #fff;
+  transform: rotate(-200deg);
+  transition: transform 200ms ease-in-out;
+  font-size: 30px;
 }
 .container-menu section .menu_plat:hover .menu_plat_selection {
   width: 100px;
-  transform: translate(0 0);
-  transition: transform 330ms ease-in-out;
+  transform: translate(0, 0);
+  transition: transform 200ms ease-in-out;
+}
+.container-menu section .menu_plat:hover .menu_plat_selection i {
+  color: #fff;
+  transform: rotate(0);
+  transition: transform 200ms ease-in-out 0.1s;
 }
 
 /*# sourceMappingURL=style.css.map */
