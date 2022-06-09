@@ -49,6 +49,14 @@
             &_texte {
                 flex-basis: 90%;
                 padding: 11px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                h4 {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
             }
             &_prix {
                 flex-basis: 10%;
@@ -80,13 +88,13 @@
             &:hover {
                 .menu_plat_selection {
                     width: 100px;
-                    transform: translate(0, 0);
+                    transform: translate(0,0);
                     transition: transform 200ms ease-in-out;
                     i { 
                         //transition-delay: 3s;
                         color: $colour-white;
                         transform: rotate(0);
-                        transition: transform 200ms ease-in-out .1s;
+                        transition: transform 300ms ease-in-out .15s;
                     }
                 }
             }

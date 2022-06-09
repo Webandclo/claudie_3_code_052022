@@ -94,7 +94,7 @@ h3 {
 
 h4 {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 textarea {
@@ -322,6 +322,14 @@ a {
 .container-menu section .menu_plat_texte {
   flex-basis: 90%;
   padding: 11px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container-menu section .menu_plat_texte h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .container-menu section .menu_plat_prix {
   flex-basis: 10%;
@@ -357,7 +365,7 @@ a {
 .container-menu section .menu_plat:hover .menu_plat_selection i {
   color: #fff;
   transform: rotate(0);
-  transition: transform 200ms ease-in-out 0.1s;
+  transition: transform 300ms ease-in-out 0.15s;
 }
 
 /*# sourceMappingURL=style.css.map */
