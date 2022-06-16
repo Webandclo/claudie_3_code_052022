@@ -67,6 +67,7 @@
 
 .reserver {
     text-align: center;
+    flex: 100%;
 }
 .fonctionnement {
     padding: 25px;
@@ -74,6 +75,14 @@
 .reserver ,.restaurants {
     background: lighten($colour-grey, 47%);
     padding: 25px;
+}
+.main-bloc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bloc-card {
+    margin: 20px 0;
+    display: block;
 }
 .card {
     border-radius: 20px;
@@ -100,30 +109,27 @@
     .container-favorit {
         flex-basis: 20%;
         flex-shrink: 1;
+        display: flex;
         position: relative;
-        &::before {
-            display: flex;
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            content: "\f004";
-            width: 21px;
-            height: 15px;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            right: 0;
-            -webkit-text-fill-color: white;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: $colour-black;      
+        .fa-heart {
+            &.fa-solid {
+                @include heart;
+                opacity: 0;
+            }
+            &.fa-regular {
+                @include heart;
+                opacity: 1;
+            }
         }
-        &:hover::before {
-            // color: ;
-            -webkit-text-fill-color: inherit;
-            -webkit-text-stroke-color: inherit;
-            -webkit-text-stroke-width: 0;
-            color : linear-gradient(-5deg, #9356DC, #FF79DA );
-            color :#9356DC;
-            
+        &:hover {
+            .fa-solid {
+                opacity: 1;
+                transform: scale(2);
+                -webkit-transform: scale(1.4);
+            }
+            .fa-regular {
+                opacity: 0;
+            }
         }
     }
     .tag-new {
@@ -139,8 +145,70 @@
     }
 }
 
-
+// Desktop //
 @media only screen and (min-width: 768px) {
-    .container, .header {
+    .container, .header{
+        max-width: inherit;
+    }
+    .container {
+        .fonctionnement {
+            padding: 0;
+            @include desktopposition;
+        }
+    }
+    body {
+        background-size: 100%;
+        background-position: top center;
+        background-image: url(/assets/images/assiette-vide.jpg);
+    }
+    .header {
+        @include desktopposition;
+        flex-direction: initial;
+        &__logo , nav{
+            width: 50%;
+            margin: 0;
+        }
+        h1 {
+            font-size: 4rem;
+        }
+        .nav {
+            box-shadow: none;
+            background: inherit;
+            ul {
+                display: flex;
+                align-items: center;
+                color: $colour-primary;
+            }
+            i {
+                color: $colour-primary;
+            }
+        }
+        .reserver {
+            background: inherit;
+            padding-top: 90px;
+        }
+    }
+    .bloc-card {
+        width: 45%;
+        margin: 2%;
+    }
+    .fonctionnement {
+        h2 {
+            font-size: 20px;
+        }
+        ul {
+            margin: 0;
+            display: flex;
+            li {
+                flex: 30%;
+                margin: 0;
+                transition: all 200ms;
+                &:hover {
+                    transform: translate(0, -10px);
+                    transition: all 200ms;
+                }
+            }
+        }
+
     }
 }

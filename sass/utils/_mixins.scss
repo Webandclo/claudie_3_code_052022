@@ -16,3 +16,24 @@
         margin: 0 auto;
     }
 }
+
+@mixin desktopposition {
+    max-width: 1024px;
+    margin: auto;   
+}
+@mixin heart {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background: $colour-primary;
+    background: linear-gradient(-5deg, $colour-primary, $colour-secondary );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+}
+
+

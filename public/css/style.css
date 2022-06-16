@@ -46,6 +46,10 @@ body {
   line-height: 1.4;
 }
 
+p {
+  color: #000;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
@@ -198,6 +202,7 @@ a {
 
 .reserver {
   text-align: center;
+  flex: 100%;
 }
 
 .fonctionnement {
@@ -207,6 +212,16 @@ a {
 .reserver, .restaurants {
   background: #f6f6f6;
   padding: 25px;
+}
+
+.main-bloc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bloc-card {
+  margin: 20px 0;
+  display: block;
 }
 
 .card {
@@ -235,29 +250,46 @@ a {
 .card .container-favorit {
   flex-basis: 20%;
   flex-shrink: 1;
+  display: flex;
   position: relative;
 }
-.card .container-favorit::before {
-  display: flex;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\f004";
-  width: 21px;
-  height: 15px;
-  align-items: center;
-  justify-content: center;
+.card .container-favorit .fa-heart.fa-solid {
   position: absolute;
-  right: 0;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
+  top: 50%;
+  right: 50%;
+  background: #9356DC;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  opacity: 0;
 }
-.card .container-favorit:hover::before {
-  -webkit-text-fill-color: inherit;
-  -webkit-text-stroke-color: inherit;
-  -webkit-text-stroke-width: 0;
-  color: linear-gradient(-5deg, #9356DC, #FF79DA);
-  color: #9356DC;
+.card .container-favorit .fa-heart.fa-regular {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background: #9356DC;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  opacity: 1;
+}
+.card .container-favorit:hover .fa-solid {
+  opacity: 1;
+  transform: scale(2);
+  -webkit-transform: scale(1.4);
+}
+.card .container-favorit:hover .fa-regular {
+  opacity: 0;
 }
 .card .tag-new {
   padding: 5px 8px;
@@ -271,6 +303,74 @@ a {
   font-weight: 300;
 }
 
+@media only screen and (min-width: 768px) {
+  .container, .header {
+    max-width: inherit;
+  }
+
+  .container .fonctionnement {
+    padding: 0;
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  body {
+    background-size: 100%;
+    background-position: top center;
+    background-image: url(/assets/images/assiette-vide.jpg);
+  }
+
+  .header {
+    max-width: 1024px;
+    margin: auto;
+    flex-direction: initial;
+  }
+  .header__logo, .header nav {
+    width: 50%;
+    margin: 0;
+  }
+  .header h1 {
+    font-size: 4rem;
+  }
+  .header .nav {
+    box-shadow: none;
+    background: inherit;
+  }
+  .header .nav ul {
+    display: flex;
+    align-items: center;
+    color: #9356DC;
+  }
+  .header .nav i {
+    color: #9356DC;
+  }
+  .header .reserver {
+    background: inherit;
+    padding-top: 90px;
+  }
+
+  .bloc-card {
+    width: 45%;
+    margin: 2%;
+  }
+
+  .fonctionnement h2 {
+    font-size: 20px;
+  }
+  .fonctionnement ul {
+    margin: 0;
+    display: flex;
+  }
+  .fonctionnement ul li {
+    flex: 30%;
+    margin: 0;
+    transition: all 200ms;
+  }
+  .fonctionnement ul li:hover {
+    transform: translate(0, -10px);
+    transition: all 200ms;
+  }
+}
 .top-image {
   max-height: 250px;
 }
@@ -303,35 +403,50 @@ a {
   flex-basis: 10%;
   flex-shrink: 1;
 }
-.container-menu section {
+.container-menu .menu {
   background: #f6f6f6;
+  overflow: hidden;
+  padding: 0 20px;
 }
-.container-menu section .menu_plat {
+.container-menu .menu_plat {
   margin: 0;
   border-radius: 20px;
   background: #fff;
   display: flex;
   margin-bottom: 12px;
+  overflow: hidden;
 }
-.container-menu section .menu_plat h3 {
+.container-menu .menu_plat h3 {
   font-size: 1.1rem;
 }
-.container-menu section .menu_plat p {
+.container-menu .menu_plat p {
   font-size: 1.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.container-menu section .menu_plat_texte {
-  flex-basis: 90%;
+.container-menu .menu_plat_texte {
+  flex-basis: 70%;
   padding: 11px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.container-menu section .menu_plat_texte h4 {
+.container-menu .menu_plat_texte h4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.container-menu section .menu_plat_prix {
+.container-menu .menu_plat_info {
+  transform: translate(50%, 0);
+  transition: transform 200ms ease-in-out;
+  flex-basis: 30%;
+  display: flex;
+  flex-grow: 1;
+  flex-grow: 1;
+  justify-content: start;
+}
+.container-menu .menu_plat_prix {
   flex-basis: 10%;
   font-size: 1.8rem;
   font-weight: 400;
@@ -340,29 +455,30 @@ a {
   align-items: end;
   padding: 10px;
 }
-.container-menu section .menu_plat_selection {
-  transform: translate(100px 0);
-  overflow: hidden;
-  width: 0;
+.container-menu .menu_plat_selection {
+  width: 100px;
   background: #99E2D0;
-  transition: transform 330ms ease-in-out;
   align-items: center;
   display: flex;
   justify-content: center;
   transform: translate(100px, 0);
+  transition: transform 600ms ease-in-out;
 }
-.container-menu section .menu_plat_selection i {
+.container-menu .menu_plat_selection i {
   color: #fff;
   transform: rotate(-200deg);
   transition: transform 200ms ease-in-out;
   font-size: 30px;
 }
-.container-menu section .menu_plat:hover .menu_plat_selection {
-  width: 100px;
+.container-menu .menu_plat:hover .menu_plat_info {
+  transform: translate(0, 0);
+  transition: transform 600ms ease-in-out;
+}
+.container-menu .menu_plat:hover .menu_plat_selection {
   transform: translate(0, 0);
   transition: transform 200ms ease-in-out;
 }
-.container-menu section .menu_plat:hover .menu_plat_selection i {
+.container-menu .menu_plat:hover .menu_plat_selection i {
   color: #fff;
   transform: rotate(0);
   transition: transform 300ms ease-in-out 0.15s;

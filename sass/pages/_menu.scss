@@ -32,22 +32,31 @@
             flex-shrink: 1;
         }
     }
-    section {
+    .menu {
         background: lighten($colour-grey, 47%);
-        .menu_plat {
+        overflow: hidden;
+        padding: 0 20px;
+
+        &_plat {
             margin: 0;
             border-radius: 20px;
             background: $colour-white;
             display: flex;
             margin-bottom: 12px;
+            overflow: hidden;
+            animation-duration: 25s;
+            animation-name: menuslide;
             h3 {
                 font-size: 1.1rem;
             }
             p {
                 font-size: 1.8rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
             &_texte {
-                flex-basis: 90%;
+                flex-basis: 70%;
                 padding: 11px;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -57,6 +66,15 @@
                     overflow: hidden;
                     white-space: nowrap;
                 }
+            }
+            &_info {
+                transform: translate(50%, 0);
+                transition: transform 200ms ease-in-out;
+                flex-basis: 30%;
+                display: flex;
+                flex-grow: 1;
+                flex-grow: 1;
+                justify-content: start;
             }
             &_prix {
                 flex-basis: 10%;
@@ -68,17 +86,14 @@
                 padding: 10px;
             }
             &_selection {
-                //transform: scale(0);
-                
-                transform: translate(100px 0);
-                overflow: hidden;
-                width: 0;
+                // overflow: hidden;
+                width: 100px;
                 background: $colour-accent;
-                transition: transform 330ms ease-in-out;
                 align-items: center;
                 display: flex;
                 justify-content: center;
                 transform: translate(100px, 0);
+                transition: transform 600ms ease-in-out;
                 i {
                     color: $colour-white;
                     transform: rotate(-200deg);
@@ -87,8 +102,12 @@
                 }
             }
             &:hover {
+                .menu_plat_info {
+                    transform: translate(0, 0);
+                    transition: transform 600ms ease-in-out;
+                }
                 .menu_plat_selection {
-                    width: 100px;
+                    
                     transform: translate(0,0);
                     transition: transform 200ms ease-in-out;
                     i { 
