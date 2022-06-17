@@ -1,3 +1,11 @@
+@keyframes menuslide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 *,
 *::after,
 *::before {
@@ -142,6 +150,7 @@ a {
 .header h1 {
   justify-content: center;
   display: flex;
+  position: relative;
 }
 
 .header .nav {
@@ -153,6 +162,18 @@ a {
 }
 .header .nav li {
   list-style: none;
+}
+
+.goback {
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  top: 20px;
+  left: 35px;
+  position: absolute;
+}
+.goback a {
+  color: #000;
 }
 
 .fonctionnement ul {
@@ -198,6 +219,9 @@ a {
   text-decoration: none;
   color: #000;
   font-weight: 300;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .reserver {
@@ -231,6 +255,11 @@ a {
   box-shadow: 1px 5px 12px #bbb;
   position: relative;
 }
+.card:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transition: transform 200ms;
+}
 .card .container-image {
   max-height: 200px;
   overflow: hidden;
@@ -238,6 +267,7 @@ a {
 .card img {
   object-fit: cover;
   width: 100%;
+  transition: transform 200ms;
 }
 .card .container-text {
   padding: 0 10px 10px 10px;
@@ -262,8 +292,6 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
   -webkit-transition: all 150ms;
   transition: all 150ms;
   opacity: 0;
@@ -277,15 +305,13 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
   -webkit-transition: all 150ms;
   transition: all 150ms;
   opacity: 1;
 }
 .card .container-favorit:hover .fa-solid {
   opacity: 1;
-  transform: scale(2);
+  transform: scale(1.4);
   -webkit-transform: scale(1.4);
 }
 .card .container-favorit:hover .fa-regular {
@@ -309,7 +335,7 @@ a {
   }
 
   .container .fonctionnement {
-    padding: 0;
+    padding: 0 40px;
     max-width: 1024px;
     margin: auto;
   }
@@ -331,6 +357,9 @@ a {
   }
   .header h1 {
     font-size: 4rem;
+  }
+  .header h2, .header h3, .header nav li {
+    text-shadow: 1px 1px #fff;
   }
   .header .nav {
     box-shadow: none;
@@ -354,21 +383,37 @@ a {
     margin: 2%;
   }
 
+  .fonctionnement {
+    overflow: hidden;
+  }
   .fonctionnement h2 {
     font-size: 20px;
   }
   .fonctionnement ul {
     margin: 0;
     display: flex;
+    gap: 20px;
   }
   .fonctionnement ul li {
+    overflow: hidden;
     flex: 30%;
     margin: 0;
     transition: all 200ms;
+    border-radius: 15px 15px 0 0;
+    display: flex;
   }
   .fonctionnement ul li:hover {
-    transform: translate(0, -10px);
+    transform: translate(0, 5px);
     transition: all 200ms;
+  }
+  .fonctionnement ul span {
+    position: absolute;
+    left: -15px;
+    top: calc(50% - 10px);
+    width: 30px;
+    height: 30px;
+    justify-content: end;
+    padding-right: 5px;
   }
 }
 .top-image {
@@ -415,6 +460,8 @@ a {
   display: flex;
   margin-bottom: 12px;
   overflow: hidden;
+  animation-duration: 3s;
+  animation-name: menuslide;
 }
 .container-menu .menu_plat h3 {
   font-size: 1.1rem;
