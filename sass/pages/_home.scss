@@ -90,7 +90,7 @@
 }
 .reserver ,.restaurants {
     background: lighten($colour-grey, 47%);
-    padding: 25px;
+    padding: 35px 25px
 }
 .main-bloc {
     display: flex;
@@ -189,6 +189,9 @@
         &__logo , nav{
             width: 50%;
             margin: 0;
+        }
+        .goback {
+            top: 15px;
         }
         h1 {
             font-size: 4rem;

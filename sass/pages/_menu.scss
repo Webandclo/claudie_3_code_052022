@@ -120,5 +120,11 @@
             }
         }
     }
+    .order {
+        background: lighten($colour-grey, 47%);
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 50px ;
+    }
 
 }

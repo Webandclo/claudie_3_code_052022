@@ -94,6 +94,7 @@ h3 {
 .container-menu h3 {
   text-transform: uppercase;
   position: relative;
+  margin: 15px 0;
 }
 .container-menu h3::after {
   position: absolute;
@@ -236,7 +237,7 @@ a {
 
 .reserver, .restaurants {
   background: #f6f6f6;
-  padding: 25px;
+  padding: 35px 25px;
 }
 
 .main-bloc {
@@ -355,6 +356,9 @@ a {
   .header__logo, .header nav {
     width: 50%;
     margin: 0;
+  }
+  .header .goback {
+    top: 15px;
   }
   .header h1 {
     font-size: 4rem;
@@ -530,6 +534,12 @@ a {
   color: #fff;
   transform: rotate(0);
   transition: transform 300ms ease-in-out 0.15s;
+}
+.container-menu .order {
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 50px;
 }
 
 .loader {

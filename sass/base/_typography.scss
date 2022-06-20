@@ -39,6 +39,7 @@ h3 {
 .container-menu h3 {
     text-transform: uppercase;
     position: relative;
+    margin: 15px 0;
     &::after {
         position: absolute;
         background: $colour-accent;
