@@ -20,6 +20,7 @@ html {
 
 body {
   box-sizing: border-box;
+  position: relative;
 }
 
 .container, .header {
@@ -256,8 +257,8 @@ a {
   position: relative;
 }
 .card:hover img {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
   transition: transform 200ms;
 }
 .card .container-image {
@@ -529,6 +530,42 @@ a {
   color: #fff;
   transform: rotate(0);
   transition: transform 300ms ease-in-out 0.15s;
+}
+
+.loader {
+  background: rgba(147, 86, 220, 0.5);
+  position: absolute;
+  opacity: 1;
+  z-index: 99998;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #9356DC rgba(0, 0, 0, 0);
+  /* @keyframes duration | timing-function | delay |
+  iteration-count | direction | fill-mode | play-state | name */
+  animation: spinner 0.7s 3;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0.5turn);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
