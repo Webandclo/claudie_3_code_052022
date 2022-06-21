@@ -46,6 +46,7 @@
             overflow: hidden;
             animation-duration: 3s;
             animation-name: menuslide;
+            height: fit-content;
             h3 {
                 font-size: 1.1rem;
             }
@@ -55,26 +56,51 @@
                 overflow: hidden;
                 white-space: nowrap;
             }
-            &_texte {
-                flex-basis: 70%;
-                padding: 11px;
+            &_caption {
+                // flex-basis: 70%;
+                // padding: 11px;
+                // text-overflow: ellipsis;
+                // overflow: hidden;
+                // white-space: nowrap;
+                display: flex;
+                flex: 100%;
+                white-space: nowrap;
+                flex-direction: column;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                white-space: nowrap;
+                transition: all 200ms;
+                padding: 15px;
                 h4 {
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
                 }
+                &_description {
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
             &_info {
-                transform: translate(50%, 0);
-                transition: transform 200ms ease-in-out;
-                flex-basis: 30%;
+                // transform: translate(50%, 0);
+                // transition: transform 200ms ease-in-out;
+                // flex-basis: 30%;
+                // display: flex;
+                // flex-grow: 1;
+                // flex-grow: 1;
+                // justify-content: start;
+
+                flex: 0%;
+                color: $colour-white;
+                background-color: $colour-accent;
+                text-align: center;
+                white-space: nowrap;
                 display: flex;
-                flex-grow: 1;
-                flex-grow: 1;
-                justify-content: start;
+                justify-content: center;
+                // border-top-right-radius: 20px 20px;
+                // border-bottom-right-radius: 20px 20px;
+                transform: translateX(100px);
+                cursor: pointer;
+                transition: all 700ms;
             }
             &_prix {
                 flex-basis: 10%;
@@ -87,7 +113,7 @@
             }
             &_selection {
                 // overflow: hidden;
-                width: 100px;
+                // width: 100px;
                 background: $colour-accent;
                 align-items: center;
                 display: flex;
@@ -102,9 +128,17 @@
                 }
             }
             &:hover {
+                .menu_plat_caption {
+                    transition: transform 200ms ease-in-out;
+                }
                 .menu_plat_info {
-                    transform: translate(0, 0);
+                    transform: translate(0,0);
                     transition: transform 600ms ease-in-out;
+                    flex: 25%;
+                    // transform: translateX(0px);
+                    // background-color: #99e2d0;
+                    // cursor: pointer;
+                    // color: #f6f6f6;
                 }
                 .menu_plat_selection {
                     
