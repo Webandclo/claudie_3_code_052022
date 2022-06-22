@@ -1,49 +1,50 @@
 .loader {
-    //     animation: fondu-out 0.1s ease-out 1.8s;
-        background: rgba($colour-primary, .5);;
+        background: rgba($colour-white, .5);
         position: absolute;
         opacity: 1;
-        z-index: 99998;
+        z-index: 9999;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
+        animation: loader 0.1s ease-out 3s;
+        animation-fill-mode: forwards;
     }
     
-    // @keyframes fondu-out{
-    //     0%{
-    //         opacity:1;
-    //         z-index:999;
-    //     }
+@keyframes  loader {
+   0%{
+      opacity:1;
+      z-index:998;
+   }
+   100%{
+      opacity:0;
+      z-index:-1;
+   }
+}
     
-    //     100%{
-    //         opacity:0;
-    //         z-index:-1;
-    //     }
-    // }
+.spinner {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   border: 9px solid;
+   border-color: $colour-primary #0000;
+   /* @keyframes duration | timing-function | delay |
+   iteration-count | direction | fill-mode | play-state | name */
+//animation: 3s ease-in 1s 2 reverse both paused slidein;
+   animation: spinner 0.7s 3;
+   position: fixed;
+   margin: auto;
+   left: 0;
+   top:0;
+   bottom:0;
+   right: 0;
+   z-index: 999;
+}
     
-    .spinner {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        border: 9px solid;
-        border-color: $colour-primary #0000;
-        /* @keyframes duration | timing-function | delay |
-       iteration-count | direction | fill-mode | play-state | name */
-      //animation: 3s ease-in 1s 2 reverse both paused slidein;
-        animation: spinner 0.7s 3;
-        position: fixed;
-        margin: auto;
-        left: 0;
-        top:0;
-        bottom:0;
-        right: 0;
-        z-index: 99999;
-     }
-    
-     @keyframes spinner {
-        from {
-           transform: rotate(.5turn);
-           opacity: 1;
-        }  
-     }
+@keyframes spinner {
+   from {
+      transform: rotate(.5turn);
+      opacity: 1;
+   }  
+}
+     

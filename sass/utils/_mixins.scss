@@ -35,3 +35,22 @@
 }
 
 
+@mixin menu_animation($time) {
+    position:relative;
+    bottom:-25px;
+    opacity:0;
+    animation: menu_opacity 0.2s ease-out;
+    animation-delay: $time;
+    animation-fill-mode: both;
+}
+@keyframes menu_opacity{
+    0%{
+        opacity:0;
+        bottom:-25px;
+    }
+    100%{
+        bottom:0;
+        opacity:1;
+    }
+}
+

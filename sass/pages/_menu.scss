@@ -37,6 +37,7 @@
         overflow: hidden;
         padding: 0 20px;
 
+
         &_plat {
             margin: 0;
             border-radius: 20px;
@@ -44,9 +45,16 @@
             display: flex;
             margin-bottom: 12px;
             overflow: hidden;
-            animation-duration: 3s;
-            animation-name: menuslide;
             height: fit-content;
+            &.__1 {
+                @include menu_animation(.2s);
+            }
+            &.__2 {
+                @include menu_animation(.3s);
+            }
+            &.__3 {
+                @include menu_animation(.4s);
+            }
             h3 {
                 font-size: 1.1rem;
             }
@@ -57,18 +65,13 @@
                 white-space: nowrap;
             }
             &_caption {
-                // flex-basis: 70%;
-                // padding: 11px;
-                // text-overflow: ellipsis;
-                // overflow: hidden;
-                // white-space: nowrap;
                 display: flex;
                 flex: 100%;
                 white-space: nowrap;
                 flex-direction: column;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                transition: all 200ms;
+                transition: transform 200ms ease-in-out;
                 padding: 15px;
                 h4 {
                     text-overflow: ellipsis;
@@ -81,14 +84,6 @@
                 }
             }
             &_info {
-                // transform: translate(50%, 0);
-                // transition: transform 200ms ease-in-out;
-                // flex-basis: 30%;
-                // display: flex;
-                // flex-grow: 1;
-                // flex-grow: 1;
-                // justify-content: start;
-
                 flex: 0%;
                 color: $colour-white;
                 background-color: $colour-accent;
@@ -96,8 +91,6 @@
                 white-space: nowrap;
                 display: flex;
                 justify-content: center;
-                // border-top-right-radius: 20px 20px;
-                // border-bottom-right-radius: 20px 20px;
                 transform: translateX(100px);
                 cursor: pointer;
                 transition: all 700ms;
@@ -135,10 +128,6 @@
                     transform: translate(0,0);
                     transition: transform 600ms ease-in-out;
                     flex: 25%;
-                    // transform: translateX(0px);
-                    // background-color: #99e2d0;
-                    // cursor: pointer;
-                    // color: #f6f6f6;
                 }
                 .menu_plat_selection {
                     

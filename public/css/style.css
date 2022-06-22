@@ -1,8 +1,10 @@
-@keyframes menuslide {
-  from {
+@keyframes menu_opacity {
+  0% {
     opacity: 0;
+    bottom: -25px;
   }
-  to {
+  100% {
+    bottom: 0;
     opacity: 1;
   }
 }
@@ -350,8 +352,6 @@ a {
   }
 
   .header {
-    max-width: 1024px;
-    margin: auto;
     flex-direction: initial;
   }
   .header__logo, .header nav {
@@ -466,9 +466,31 @@ a {
   display: flex;
   margin-bottom: 12px;
   overflow: hidden;
-  animation-duration: 3s;
-  animation-name: menuslide;
   height: fit-content;
+}
+.container-menu .menu_plat.__1 {
+  position: relative;
+  bottom: -25px;
+  opacity: 0;
+  animation: menu_opacity 0.2s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+.container-menu .menu_plat.__2 {
+  position: relative;
+  bottom: -25px;
+  opacity: 0;
+  animation: menu_opacity 0.2s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+.container-menu .menu_plat.__3 {
+  position: relative;
+  bottom: -25px;
+  opacity: 0;
+  animation: menu_opacity 0.2s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
 }
 .container-menu .menu_plat h3 {
   font-size: 1.1rem;
@@ -486,7 +508,7 @@ a {
   flex-direction: column;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: all 200ms;
+  transition: transform 200ms ease-in-out;
   padding: 15px;
 }
 .container-menu .menu_plat_caption h4 {
@@ -558,16 +580,28 @@ a {
 }
 
 .loader {
-  background: rgba(147, 86, 220, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
   opacity: 1;
-  z-index: 99998;
+  z-index: 9999;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  animation: loader 0.1s ease-out 3s;
+  animation-fill-mode: forwards;
 }
 
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 998;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 .spinner {
   width: 56px;
   height: 56px;
@@ -583,7 +617,7 @@ a {
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 
 @keyframes spinner {

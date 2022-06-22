@@ -185,7 +185,7 @@
         background-image: url(/assets/images/assiette-vide.jpg);
     }
     .header {
-        @include desktopposition;
+        
         flex-direction: initial;
         &__logo , nav{
             width: 50%;
