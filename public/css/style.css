@@ -588,14 +588,20 @@ a {
   bottom: 0;
   right: 0;
   left: 0;
-  animation: loader 0.1s ease-out 3s;
+  animation: loader 0.1s ease-out 2s;
+  -webkit-animation: loader 0.1s ease-out 2s;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes loader {
   0% {
     opacity: 1;
     z-index: 998;
+  }
+  90% {
+    opacity: 0.3;
+    z-index: -1;
   }
   100% {
     opacity: 0;
