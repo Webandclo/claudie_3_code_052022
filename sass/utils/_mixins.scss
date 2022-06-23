@@ -1,6 +1,5 @@
 @mixin btn {
     padding: $grid-gutter;
-    //@include border;
     background: linear-gradient($colour-secondary, $colour-primary);
     color: $colour-white;
     box-shadow: 1px 5px 12px #bbb;
@@ -18,8 +17,9 @@
 }
 
 @mixin desktopposition {
-    max-width: 1024px;
+    max-width: $desktop_width;
     margin: auto;   
+    width: 100%;
 }
 @mixin heart {
     position: absolute;

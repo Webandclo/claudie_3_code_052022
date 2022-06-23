@@ -1,19 +1,22 @@
 .header {
     display: flex;
     flex-direction: column;
-    
+
 }
+
 .header h1 {
     justify-content: center;
     display: flex;
     position: relative;
 }
+
 .header .nav {
     justify-content: center;
     display: flex;
     background: #eaeaea;
     box-shadow: inset 0px 3px 10px #bbb;
     padding: 15px;
+
     li {
         list-style: none;
     }
@@ -26,15 +29,20 @@
     top: 20px;
     left: 35px;
     position: absolute;
+
     a {
         color: $colour-black
-    };
+    }
+
+    ;
 }
+
 .fonctionnement {
     ul {
         padding: 0;
         position: relative;
         margin: 0 20px;
+
         li {
             position: relative;
             padding: 15px 20px;
@@ -44,14 +52,17 @@
             list-style: none;
             margin: 20px 0;
             color: #fff;
+
             &:hover {
                 background: lighten(#9356DC, 33%);
+
                 i {
                     color: #9356DC;
                 }
             }
         }
-        span{
+
+        span {
             position: absolute;
             left: -10px;
             top: calc(50% - 10px);
@@ -65,10 +76,12 @@
             color: #fff;
             font-size: 1.2rem;
         }
+
         i {
             color: #7e7e7e;
             padding: 0 20px;
         }
+
         a {
             text-decoration: none;
             color: #000;
@@ -85,59 +98,75 @@
     text-align: center;
     flex: 100%;
 }
+
 .fonctionnement {
     padding: 25px;
 }
-.reserver ,.restaurants {
+
+.container {
     background: lighten($colour-grey, 47%);
-    padding: 35px 25px
+    padding: 35px 25px;
+    > div {
+        @include desktopposition;
+    }
 }
+
 .main-bloc {
     display: flex;
     flex-wrap: wrap;
+    gap: 3%;
 }
+
 .bloc-card {
     margin: 20px 0;
     display: block;
 }
+
 .card {
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
     box-shadow: 1px 5px 12px #bbb;
     position: relative;
+
     &:hover img {
         transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transition: transform 200ms;
     }
+
     .container-image {
         max-height: 200px;
         overflow: hidden;
     }
+
     img {
         object-fit: cover;
         width: 100%;
         transition: transform 200ms;
     }
+
     .container-text {
         padding: 0 10px 10px 10px;
         display: flex;
     }
+
     .container-title {
         flex-basis: 80%;
         flex-shrink: 1;
     }
+
     .tag-new {
         padding: 5px 8px;
         border-radius: 2px;
         font-size: 1.5rem;
         background: $colour-accent;
-        color: darken($colour-accent, 40%) ;
+        color: darken($colour-accent, 40%);
         position: absolute;
         right: 5%;
         top: 5%;
         font-weight: 300;
+        z-index: 999;
     }
 }
 
@@ -146,22 +175,26 @@
     flex-shrink: 1;
     display: flex;
     position: relative;
+
     .fa-heart {
         &.fa-solid {
             @include heart;
             opacity: 0;
         }
+
         &.fa-regular {
             @include heart;
             opacity: 1;
         }
     }
+
     &:hover {
         .fa-solid {
             opacity: 1;
             transform: scale(1.4);
             -webkit-transform: scale(1.4);
         }
+
         .fa-regular {
             opacity: 0;
         }
@@ -170,79 +203,102 @@
 
 // Desktop //
 @media only screen and (min-width: 768px) {
-    .container, .header{
+
+    .container,
+    .header {
         max-width: inherit;
     }
+
     .container {
         .fonctionnement {
             padding: 0 40px;
             @include desktopposition;
         }
     }
+
     body {
         background-size: 100%;
         background-position: top center;
         background-image: url(/assets/images/assiette-vide.jpg);
     }
+
     .header {
-        
+
         flex-direction: initial;
-        &__logo , nav{
-            width: 50%;
+
+        &__logo,
+        nav {
+            @include desktopposition;
+            width: 100%;
             margin: 0;
         }
+
         .goback {
             top: 15px;
         }
+
         h1 {
             font-size: 4rem;
         }
-        h2, h3, nav li {
+
+        h2,
+        h3,
+        nav li {
             text-shadow: 1px 1px $colour-white;
         }
+
         .nav {
             box-shadow: none;
             background: inherit;
+
             ul {
                 display: flex;
                 align-items: center;
                 color: $colour-primary;
             }
+
             i {
                 color: $colour-primary;
             }
         }
+
         .reserver {
             background: inherit;
             padding-top: 90px;
         }
     }
+
     .bloc-card {
         width: 45%;
-        margin: 2%;
+        flex-grow: 1;
     }
+
     .fonctionnement {
         overflow: hidden;
+        @include desktopposition;
+
         h2 {
             font-size: 20px;
         }
+
         ul {
             margin: 0;
             display: flex;
             gap: 20px;
-            
+
             li {
                 overflow: hidden;
                 flex: 30%;
                 margin: 0;
                 transition: all 200ms;
-                border-radius: 15px 15px 0 0;
                 display: flex;
+
                 &:hover {
                     transform: translate(0, 5px);
                     transition: all 200ms;
                 }
             }
+
             span {
                 position: absolute;
                 left: -15px;

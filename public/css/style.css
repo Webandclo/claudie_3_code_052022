@@ -41,14 +41,25 @@ body {
   list-style: none;
 }
 .footer ul li i {
-  padding-right: 10px;
+  padding-right: 3px;
 }
-.footer .container {
+.footer .footer-container {
   display: flex;
   justify-content: start;
-  padding: 25px;
+  padding: 25px 0;
+  max-width: 1024px;
+  margin: auto;
+  width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-container ul {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-between;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -237,14 +248,20 @@ a {
   padding: 25px;
 }
 
-.reserver, .restaurants {
+.container {
   background: #f6f6f6;
   padding: 35px 25px;
+}
+.container > div {
+  max-width: 1024px;
+  margin: auto;
+  width: 100%;
 }
 
 .main-bloc {
   display: flex;
   flex-wrap: wrap;
+  gap: 3%;
 }
 
 .bloc-card {
@@ -291,6 +308,7 @@ a {
   right: 5%;
   top: 5%;
   font-weight: 300;
+  z-index: 999;
 }
 
 .container-favorit {
@@ -335,7 +353,8 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .container, .header {
+  .container,
+.header {
     max-width: inherit;
   }
 
@@ -343,6 +362,7 @@ a {
     padding: 0 40px;
     max-width: 1024px;
     margin: auto;
+    width: 100%;
   }
 
   body {
@@ -354,8 +374,12 @@ a {
   .header {
     flex-direction: initial;
   }
-  .header__logo, .header nav {
-    width: 50%;
+  .header__logo,
+.header nav {
+    max-width: 1024px;
+    margin: auto;
+    width: 100%;
+    width: 100%;
     margin: 0;
   }
   .header .goback {
@@ -364,7 +388,9 @@ a {
   .header h1 {
     font-size: 4rem;
   }
-  .header h2, .header h3, .header nav li {
+  .header h2,
+.header h3,
+.header nav li {
     text-shadow: 1px 1px #fff;
   }
   .header .nav {
@@ -386,11 +412,14 @@ a {
 
   .bloc-card {
     width: 45%;
-    margin: 2%;
+    flex-grow: 1;
   }
 
   .fonctionnement {
     overflow: hidden;
+    max-width: 1024px;
+    margin: auto;
+    width: 100%;
   }
   .fonctionnement h2 {
     font-size: 20px;
@@ -405,7 +434,6 @@ a {
     flex: 30%;
     margin: 0;
     transition: all 200ms;
-    border-radius: 15px 15px 0 0;
     display: flex;
   }
   .fonctionnement ul li:hover {
@@ -579,6 +607,22 @@ a {
   padding: 20px 0 50px;
 }
 
+@media only screen and (min-width: 768px) {
+  .container-menu {
+    max-width: 1024px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container-menu .menu, .container-menu .order {
+    flex: 33%;
+  }
+  .container-menu .bloc-menu-title {
+    display: flex;
+    flex: 100%;
+  }
+}
 .loader {
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
@@ -591,7 +635,6 @@ a {
   animation: loader 0.1s ease-out 2s;
   -webkit-animation: loader 0.1s ease-out 2s;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes loader {
@@ -629,7 +672,6 @@ a {
 @keyframes spinner {
   from {
     transform: rotate(0.5turn);
-    opacity: 1;
   }
 }
 

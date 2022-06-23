@@ -1,5 +1,7 @@
 .top-image {
-        max-height: 250px;;
+    max-height: 250px;
+    ;
+
     img {
         object-fit: cover;
         width: 100%;
@@ -8,11 +10,13 @@
 }
 
 .container-menu {
+
     // position: relative;
     .bloc-menu-title {
         position: relative;
         background: lighten($colour-grey, 47%);
         display: flex;
+
         &::before {
             content: "";
             top: -30px;
@@ -22,16 +26,19 @@
             height: 30px;
             position: absolute;
         }
+
         .bloc-title {
             flex-basis: 90%;
             flex-shrink: 1;
             padding: 0 15px;
         }
+
         .bloc-favorit {
             flex-basis: 10%;
             flex-shrink: 1;
         }
     }
+
     .menu {
         background: lighten($colour-grey, 47%);
         overflow: hidden;
@@ -46,24 +53,30 @@
             margin-bottom: 12px;
             overflow: hidden;
             height: fit-content;
+
             &.__1 {
                 @include menu_animation(.2s);
             }
+
             &.__2 {
                 @include menu_animation(.3s);
             }
+
             &.__3 {
                 @include menu_animation(.4s);
             }
+
             h3 {
                 font-size: 1.1rem;
             }
+
             p {
                 font-size: 1.8rem;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
             }
+
             &_caption {
                 display: flex;
                 flex: 100%;
@@ -73,16 +86,19 @@
                 overflow: hidden;
                 transition: transform 200ms ease-in-out;
                 padding: 15px;
+
                 h4 {
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
                 }
+
                 &_description {
                     display: flex;
                     justify-content: space-between;
                 }
             }
+
             &_info {
                 flex: 0%;
                 color: $colour-white;
@@ -95,6 +111,7 @@
                 cursor: pointer;
                 transition: all 700ms;
             }
+
             &_prix {
                 flex-basis: 10%;
                 font-size: 1.8rem;
@@ -104,6 +121,7 @@
                 align-items: end;
                 padding: 10px;
             }
+
             &_selection {
                 // overflow: hidden;
                 // width: 100px;
@@ -113,6 +131,7 @@
                 justify-content: center;
                 transform: translate(100px, 0);
                 transition: transform 600ms ease-in-out;
+
                 i {
                     color: $colour-white;
                     transform: rotate(-200deg);
@@ -120,20 +139,24 @@
                     font-size: 30px;
                 }
             }
+
             &:hover {
                 .menu_plat_caption {
                     transition: transform 200ms ease-in-out;
                 }
+
                 .menu_plat_info {
-                    transform: translate(0,0);
+                    transform: translate(0, 0);
                     transition: transform 600ms ease-in-out;
                     flex: 25%;
                 }
+
                 .menu_plat_selection {
-                    
-                    transform: translate(0,0);
+
+                    transform: translate(0, 0);
                     transition: transform 200ms ease-in-out;
-                    i { 
+
+                    i {
                         //transition-delay: 3s;
                         color: $colour-white;
                         transform: rotate(0);
@@ -143,11 +166,29 @@
             }
         }
     }
+
     .order {
         background: lighten($colour-grey, 47%);
         display: flex;
         justify-content: center;
-        padding: 20px 0 50px ;
+        padding: 20px 0 50px;
     }
 
+}
+
+
+// Desktop //
+@media only screen and (min-width: 768px) {
+    .container-menu {
+        @include desktopposition;
+        display: flex;
+        flex-wrap: wrap;
+        .menu, .order {
+            flex: 33%;
+        }
+        .bloc-menu-title {
+            display: flex;
+            flex: 100%;
+          }
+    }
 }
