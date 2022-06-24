@@ -84,7 +84,7 @@
                 flex-direction: column;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                transition: transform 200ms ease-in-out;
+                transition: all 200ms ease-in-out;
                 padding: 15px;
 
                 h4 {
@@ -152,7 +152,6 @@
                 }
 
                 .menu_plat_selection {
-
                     transform: translate(0, 0);
                     transition: transform 200ms ease-in-out;
 

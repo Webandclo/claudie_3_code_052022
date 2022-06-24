@@ -43,6 +43,9 @@ body {
 .footer ul li i {
   padding-right: 3px;
 }
+.footer ul li a {
+  color: #fff;
+}
 .footer .footer-container {
   display: flex;
   justify-content: start;
@@ -539,7 +542,7 @@ a {
   flex-direction: column;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: transform 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   padding: 15px;
 }
 .container-menu .menu_plat_caption h4 {
