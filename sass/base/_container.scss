@@ -18,7 +18,7 @@
     .footer-container {
         display: flex;
         justify-content: start;
-        padding: 25px 0;
+        padding: $grid-gutter;
         @include desktopposition;
     }
 }
@@ -27,7 +27,8 @@
 // Desktop //
 @media only screen and (min-width: 768px) {
 
-    .footer-container {
+    .footer .footer-container {
+        padding: $grid-gutter 0;
         ul {
             display: flex;
             flex-grow: 1;
