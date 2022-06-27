@@ -1,4 +1,5 @@
-.container, .header {
+.container,
+.header {
     margin: auto;
     max-width: 768px;
     display: flex;
@@ -9,15 +10,19 @@
 .footer {
     background: #353535;
     color: $colour-white;
+
     ul li {
         list-style: none;
+
         i {
             padding-right: 3px;
         }
+
         a {
             color: $colour-white;
         }
     }
+
     .footer-container {
         display: flex;
         justify-content: start;
@@ -26,18 +31,22 @@
     }
 }
 
-
-// Desktop //
-@media only screen and (min-width: 768px) {
-
+// Only Desktop 1024px
+@media only screen and (min-width: $desktop_width) {
     .footer .footer-container {
         padding: $grid-gutter 0;
+    }
+}
+
+// Tablette and Desktop //
+@media only screen and (min-width: $desktop_width) {
+    .footer .footer-container {
         ul {
             display: flex;
             flex-grow: 1;
             flex-shrink: 1;
             justify-content: space-between;
-
         }
     }
+
 }

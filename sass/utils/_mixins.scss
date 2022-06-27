@@ -1,14 +1,17 @@
 @mixin btn {
-    padding: $grid-gutter;
     background: linear-gradient($colour-secondary, $colour-primary);
     color: $colour-white;
     box-shadow: 1px 5px 12px #bbb;
     cursor: pointer;
     border-radius: 22px;
     border: none;
-    padding: 10px 20px;
-    &:hover{
-        background: linear-gradient( $colour-primary, $colour-secondary);
+    padding: 10px $grid-gutter;
+    transition: $transition_speed;
+    &:hover {
+        background: linear-gradient( lighten($colour-secondary, 10%), lighten($colour-primary, 10%));
+        // background: linear-gradient( rgba($colour-secondary, 0.8), rgba($colour-primary, 0.8));
+        box-shadow: 3px 8px 8px #bbb;
+        transition: $transition_speed;
     }
     &--full-width {
         width: 100%;
@@ -28,9 +31,7 @@
     background: $colour-primary;
     background: linear-gradient(-5deg, $colour-primary, $colour-secondary );
     background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
-    -webkit-transition: all 150ms;
     transition: all 150ms;
 }
 
