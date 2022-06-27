@@ -8,16 +8,6 @@
     opacity: 1;
   }
 }
-@keyframes menu_opacity {
-  0% {
-    opacity: 0;
-    bottom: -25px;
-  }
-  100% {
-    bottom: 0;
-    opacity: 1;
-  }
-}
 *,
 *::after,
 *::before {
@@ -193,7 +183,7 @@ a {
   justify-content: center;
   display: flex;
   background: #eaeaea;
-  box-shadow: inset 0px 3px 10px #bbb;
+  box-shadow: inset 1px 5px 12px #bbb;
   padding: 15px;
 }
 .header .nav li {
@@ -535,6 +525,14 @@ a {
   opacity: 0;
   animation: menu_opacity 0.2s ease-out;
   animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+.container-menu .menu_plat.__4 {
+  position: relative;
+  bottom: -25px;
+  opacity: 0;
+  animation: menu_opacity 0.2s ease-out;
+  animation-delay: 0.5s;
   animation-fill-mode: both;
 }
 .container-menu .menu_plat h3 {

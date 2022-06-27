@@ -14,7 +14,8 @@
     justify-content: center;
     display: flex;
     background: #eaeaea;
-    box-shadow: inset 0px 3px 10px #bbb;
+    box-shadow: inset $shadow;
+    
     padding: 15px;
 
     li {
@@ -47,15 +48,13 @@
             position: relative;
             padding: 15px 20px;
             background: lighten($colour-grey, 47%);
-            box-shadow: 1px 5px 12px #bbb;
+            box-shadow: $shadow;
             border-radius: 15px;
             list-style: none;
             margin: 20px 0;
-            color: #fff;
-
+            color: $colour-white;
             &:hover {
                 background: lighten(#9356DC, 33%);
-
                 i {
                     color: #9356DC;
                 }
@@ -126,7 +125,7 @@
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 1px 5px 12px #bbb;
+    box-shadow: $shadow;
     position: relative;
 
     &:hover img {

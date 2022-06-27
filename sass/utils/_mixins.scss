@@ -9,7 +9,6 @@
     transition: $transition_speed;
     &:hover {
         background: linear-gradient( lighten($colour-secondary, 10%), lighten($colour-primary, 10%));
-        // background: linear-gradient( rgba($colour-secondary, 0.8), rgba($colour-primary, 0.8));
         box-shadow: 3px 8px 8px #bbb;
         transition: $transition_speed;
     }
@@ -45,14 +44,3 @@
     animation-fill-mode: both;
 
 }
-@keyframes menu_opacity{
-    0%{
-        opacity:0;
-        bottom:-25px;
-    }
-    100%{
-        bottom:0;
-        opacity:1;
-    }
-}
-

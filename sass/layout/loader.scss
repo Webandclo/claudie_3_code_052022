@@ -9,28 +9,20 @@
    left: 0;
    animation: loader 0.1s ease-out 2s;
    -webkit-animation: loader 0.1s ease-out 2s;
-   // animation-fill-mode: both;
-   //animation-fill-mode: backwards;
    animation-fill-mode: forwards;
 }
-
 @keyframes loader {
    0% {
       opacity: 1;
       z-index: 998;
-   }
-
-   90% {
+   } 90% {
       opacity: 0.3;
       z-index: -1;
-   }
-
-   100% {
+   } 100% {
       opacity: 0;
       z-index: -1;
    }
 }
-
 .spinner {
    width: 56px;
    height: 56px;
@@ -48,7 +40,6 @@
    right: 0;
    z-index: 999;
 }
-
 @keyframes spinner {
    from {
       transform: rotate(.5turn);

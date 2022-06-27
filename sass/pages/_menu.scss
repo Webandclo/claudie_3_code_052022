@@ -57,13 +57,14 @@
             &.__1 {
                 @include menu_animation(.2s);
             }
-
             &.__2 {
                 @include menu_animation(.3s);
             }
-
             &.__3 {
                 @include menu_animation(.4s);
+            }
+            &.__4 {
+                @include menu_animation(.5s);
             }
 
             h3 {
@@ -156,7 +157,6 @@
                     transition: $transition_medium ease-in-out;
 
                     i {
-                        //transition-delay: 3s;
                         color: $colour-white;
                         transform: rotate(0);
                         transition: $transition_medium 400ms;
