@@ -1,14 +1,18 @@
-// couleurs
-
+// coulors
 $colour-primary: #9356DC; //violet
 $colour-secondary: #FF79DA; //rose
-$colour-accent: #99E2D0; //vert menthe
+$colour-terceira: #99E2D0; //vert menthe
 $colour-white: #fff;
 $colour-black: #000;
-$colour-grey: #7e7e7e;   //
+$colour-grey: #7e7e7e;
 
+// Transition
+$transition_speed: all 150ms;
+$transition_medium: all 300ms;
+$transition_slow: all 600ms;
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: 25px;
+// Width
 $desktop_width: 1024px;
+$tablet_width: 768px;
+
+$grid-gutter: 25px;
