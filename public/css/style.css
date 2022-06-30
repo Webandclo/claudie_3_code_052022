@@ -61,7 +61,7 @@ body {
     padding: 25px 0;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .footer .footer-container ul {
     display: flex;
     flex-grow: 1;
@@ -95,6 +95,10 @@ h1 {
 h2, h3, h4 {
   font-family: "Roboto", sans-serif;
   margin: 5px 0;
+}
+
+h2 {
+  margin: 15px 0;
 }
 
 h3 {

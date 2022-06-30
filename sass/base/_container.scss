@@ -39,7 +39,7 @@
 }
 
 // Tablette and Desktop //
-@media only screen and (min-width: $desktop_width) {
+@media only screen and (min-width: $tablet_width) {
     .footer .footer-container {
         ul {
             display: flex;

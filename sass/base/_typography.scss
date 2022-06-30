@@ -17,10 +17,12 @@ h1 {
     font-family: 'Shrikhand', cursive;
     font-weight: 500;
 }
-
 h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
     margin: 5px 0;
+}
+h2 {
+    margin: 15px 0;
 }
 h3 {
     color: $colour-grey;
