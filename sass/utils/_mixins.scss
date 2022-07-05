@@ -30,13 +30,12 @@
     background: $colour-primary;
     background: linear-gradient(-5deg, $colour-primary, $colour-secondary );
     background-clip: text;
-        /* if we can clip, do it */
+        /* for Chrome and Safari */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     color: transparent;
     transition: all 150ms;
 }
-
 
 @mixin menu_animation($time) {
     position:relative;
@@ -45,5 +44,4 @@
     animation: menu_opacity 0.2s ease-out;
     animation-delay: $time;
     animation-fill-mode: both;
-
 }
