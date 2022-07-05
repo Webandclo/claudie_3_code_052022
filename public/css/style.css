@@ -51,12 +51,12 @@ body {
   display: flex;
   justify-content: start;
   padding: 25px;
-  max-width: 1024px;
+  max-width: 992px;
   margin: auto;
   width: 100%;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
   .footer .footer-container {
     padding: 25px 0;
   }
@@ -176,6 +176,100 @@ a {
   margin: 0 auto;
 }
 
+.loader {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  opacity: 1;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: loader 0.1s ease-out 2s;
+  -webkit-animation: loader 0.1s ease-out 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 998;
+  }
+  90% {
+    opacity: 0.3;
+    z-index: -1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #9356DC rgba(0, 0, 0, 0);
+  /* @keyframes duration | timing-function | delay |
+  iteration-count | direction | fill-mode | play-state | name */
+  animation: spinner 0.7s 3;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0.5turn);
+  }
+}
+.container-favorit {
+  flex-basis: 20%;
+  flex-shrink: 1;
+  display: flex;
+  position: relative;
+}
+.container-favorit .fa-heart.fa-solid {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background: #9356DC;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background-clip: text;
+  /* for Chrome and Safari */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 150ms;
+  opacity: 0;
+}
+.container-favorit .fa-heart.fa-regular {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background: #9356DC;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background-clip: text;
+  /* for Chrome and Safari */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 150ms;
+  opacity: 1;
+}
+.container-favorit:hover .fa-solid {
+  opacity: 1;
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+}
+.container-favorit:hover .fa-regular {
+  opacity: 0;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -272,7 +366,7 @@ a {
   padding: 35px 25px;
 }
 .container > div {
-  max-width: 1024px;
+  max-width: 992px;
   margin: auto;
   width: 100%;
 }
@@ -330,49 +424,6 @@ a {
   z-index: 999;
 }
 
-.container-favorit {
-  flex-basis: 20%;
-  flex-shrink: 1;
-  display: flex;
-  position: relative;
-}
-.container-favorit .fa-heart.fa-solid {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  background: #9356DC;
-  background: linear-gradient(-5deg, #9356DC, #FF79DA);
-  background-clip: text;
-  /* if we can clip, do it */
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 150ms;
-  opacity: 0;
-}
-.container-favorit .fa-heart.fa-regular {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  background: #9356DC;
-  background: linear-gradient(-5deg, #9356DC, #FF79DA);
-  background-clip: text;
-  /* if we can clip, do it */
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 150ms;
-  opacity: 1;
-}
-.container-favorit:hover .fa-solid {
-  opacity: 1;
-  transform: scale(1.4);
-  -webkit-transform: scale(1.4);
-}
-.container-favorit:hover .fa-regular {
-  opacity: 0;
-}
-
 @media only screen and (min-width: 768px) {
   .container,
 .header {
@@ -381,7 +432,7 @@ a {
 
   .container .fonctionnement {
     padding: 0 40px;
-    max-width: 1024px;
+    max-width: 992px;
     margin: auto;
     width: 100%;
   }
@@ -397,7 +448,7 @@ a {
   }
   .header__logo,
 .header nav {
-    max-width: 1024px;
+    max-width: 992px;
     margin: auto;
     width: 100%;
     width: 100%;
@@ -438,12 +489,9 @@ a {
 
   .fonctionnement {
     overflow: hidden;
-    max-width: 1024px;
+    max-width: 992px;
     margin: auto;
     width: 100%;
-  }
-  .fonctionnement h2 {
-    font-size: 20px;
   }
   .fonctionnement ul {
     margin: 0;
@@ -639,70 +687,27 @@ a {
 
 @media only screen and (min-width: 768px) {
   .container-menu {
-    max-width: 1024px;
+    max-width: 992px;
     margin: auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
-  .container-menu .menu,
-.container-menu .order {
-    flex: 33%;
+  .container-menu .menu {
+    flex: 50%;
+  }
+  .container-menu .order {
+    flex: 100%;
   }
   .container-menu .bloc-menu-title {
     display: flex;
     flex: 100%;
   }
 }
-.loader {
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  opacity: 1;
-  z-index: 9999;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  animation: loader 0.1s ease-out 2s;
-  -webkit-animation: loader 0.1s ease-out 2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes loader {
-  0% {
-    opacity: 1;
-    z-index: 998;
-  }
-  90% {
-    opacity: 0.3;
-    z-index: -1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-.spinner {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 9px solid;
-  border-color: #9356DC rgba(0, 0, 0, 0);
-  /* @keyframes duration | timing-function | delay |
-  iteration-count | direction | fill-mode | play-state | name */
-  animation: spinner 0.7s 3;
-  position: fixed;
-  margin: auto;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 999;
-}
-
-@keyframes spinner {
-  from {
-    transform: rotate(0.5turn);
+@media only screen and (min-width: 992px) {
+  .container-menu .menu,
+.container-menu .order {
+    flex: 33%;
   }
 }
 

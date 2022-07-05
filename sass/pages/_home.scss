@@ -169,40 +169,6 @@
     }
 }
 
-.container-favorit {
-    flex-basis: 20%;
-    flex-shrink: 1;
-    display: flex;
-    position: relative;
-
-    .fa-heart {
-        &.fa-solid {
-            @include heart;
-            opacity: 0;
-        }
-
-        &.fa-regular {
-            @include heart;
-            opacity: 1;
-        }
-    }
-
-    &:hover {
-        .fa-solid {
-            opacity: 1;
-            transform: scale(1.4);
-            -webkit-transform: scale(1.4);
-        }
-
-        .fa-regular {
-            opacity: 0;
-        }
-    }
-}
-
-
-
-
 
 
 // Desktop and tablet//
@@ -279,11 +245,6 @@
     .fonctionnement {
         overflow: hidden;
         @include desktopposition;
-
-        h2 {
-            font-size: 20px;
-        }
-
         ul {
             margin: 0;
             display: flex;
