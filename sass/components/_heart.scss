@@ -21,6 +21,10 @@
             opacity: 1;
             transform: scale(1.4);
             -webkit-transform: scale(1.4);
+            background: linear-gradient(-5deg, $colour-primary, $colour-secondary );
+            /* for Chrome and Safari */
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
         }
 
         .fa-regular {

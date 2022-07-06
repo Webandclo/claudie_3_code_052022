@@ -237,12 +237,8 @@ a {
   position: absolute;
   top: 50%;
   right: 50%;
-  background: #9356DC;
-  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background: #000;
   background-clip: text;
-  /* for Chrome and Safari */
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   color: transparent;
   transition: all 150ms;
   opacity: 0;
@@ -251,12 +247,8 @@ a {
   position: absolute;
   top: 50%;
   right: 50%;
-  background: #9356DC;
-  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  background: #000;
   background-clip: text;
-  /* for Chrome and Safari */
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   color: transparent;
   transition: all 150ms;
   opacity: 1;
@@ -265,6 +257,10 @@ a {
   opacity: 1;
   transform: scale(1.4);
   -webkit-transform: scale(1.4);
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  /* for Chrome and Safari */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .container-favorit:hover .fa-regular {
   opacity: 0;
@@ -278,7 +274,6 @@ a {
 .header h1 {
   justify-content: center;
   display: flex;
-  position: relative;
 }
 
 .header .nav {
@@ -286,6 +281,7 @@ a {
   display: flex;
   background: #eaeaea;
   box-shadow: inset 1px 5px 12px #bbb;
+  position: relative;
   padding: 15px;
 }
 .header .nav li {
@@ -296,7 +292,7 @@ a {
   width: 45px;
   height: 45px;
   font-size: 22px;
-  top: 20px;
+  top: 50px;
   left: 35px;
   position: absolute;
 }
@@ -456,6 +452,7 @@ a {
   }
   .header .goback {
     top: 15px;
+    left: 20%;
   }
   .header h1 {
     font-size: 4rem;
@@ -702,12 +699,6 @@ a {
   .container-menu .bloc-menu-title {
     display: flex;
     flex: 100%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .container-menu .menu,
-.container-menu .order {
-    flex: 33%;
   }
 }
 
